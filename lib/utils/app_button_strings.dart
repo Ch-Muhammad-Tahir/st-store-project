@@ -3,4 +3,5 @@ class AppButtonStrings {
   static String signUpButton = "SIGN UP";
   static String signInButton = "SIGN IN";
   static String getStartedButton = "GET STARTED";
+  static String continueButton = "CONTINUE";
 }
