@@ -33,6 +33,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         ),
         TextField(
           autofocus: false,
+          controller: widget.controller,
           decoration: InputDecoration(
             hintText: widget.hintText,
             prefixIcon: Icon(widget.iconData),

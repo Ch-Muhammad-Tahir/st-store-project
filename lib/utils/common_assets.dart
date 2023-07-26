@@ -14,6 +14,7 @@ class CommonAppAssets {
   static String sacnRactangle = "assets/Rectangle.png";
   static String sacnCancel = "assets/alarm@2x.png";
   static String sacnProduct = "assets/Image.png";
+  static String topBar = "assets/top_bar.png";
 
   static String options = "assets/options.png";
   static String backArrow = "assets/arrow-long-left.png";

@@ -10,6 +10,7 @@ class CategoriesListViewBuider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+        physics: BouncingScrollPhysics(),
         itemBuilder: (context, index) {
           return CategoryViewItemTile(
             product: products[index],

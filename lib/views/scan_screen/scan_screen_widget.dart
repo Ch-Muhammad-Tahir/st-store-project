@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:st_store/utils/common_assets.dart';
+import 'package:st_store/views/home_page_screen/home_page_screen_widget.dart';
 import 'package:st_store/views/scan_screen/scan_screen_widgets/custom_container.dart';
 import 'package:st_store/views/scan_screen/scan_screen_widgets/custom_product_view_details.dart';
 
@@ -25,12 +26,18 @@ class ScanScreeWidget extends StatelessWidget {
             Positioned(
                 top: 50,
                 left: 50,
-                child: CustomScanContainerWidget(
-                  height: 40,
-                  width: 40,
-                  imagePath: CommonAppAssets.sacnCancel,
+                child: IconButton(
+                  icon: Image.asset(CommonAppAssets.sacnCancel),
+                  onPressed: () {
+                    Navigator.pop(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomePageScreenWidget()),
+                    );
+                  },
                 )),
-            Positioned(bottom: 50, child: CustomProductViewDetailsWidiget())
+            const Positioned(
+                bottom: 50, child: CustomProductViewDetailsWidiget())
           ],
         ),
       ),

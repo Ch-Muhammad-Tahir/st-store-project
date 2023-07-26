@@ -13,6 +13,7 @@ import '../../widgets/custom_sized_box.dart';
 import '../../widgets/custom_text_fied.dart';
 
 import '../../utils/app_button_strings.dart';
+import '../home_page_screen/home_page_screen_widget.dart';
 
 class LoginScreenWidget extends StatefulWidget {
   const LoginScreenWidget({super.key});
@@ -72,7 +73,9 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget> {
                     height: 100,
                   ),
                   CustomTextIconButton(
-                    onTab: () {},
+                    onTab: () {
+                      loginButtonOnTab();
+                    },
                     radius: 5,
                     color: AppCommonColors.yelloButtonColor,
                     buttonText: AppButtonStrings.signInButton,
@@ -113,11 +116,16 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget> {
   void loginButtonOnTab() {
     String tfUserName = userNameTfController.text.trim();
     String tfPassword = passwordTfController.text.trim();
-
+    print(tfUserName);
     if (tfUserName.isEmpty) {
       showToast(context, AppToastStrings.enterEmail);
-    } else if (tfUserName.isEmpty) {
+    } else if (tfPassword.isEmpty) {
       showToast(context, AppToastStrings.enterPawssword);
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomePageScreenWidget()),
+      );
     }
   }
 

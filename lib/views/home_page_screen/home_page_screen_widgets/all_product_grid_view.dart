@@ -9,6 +9,7 @@ class CustomAllProductGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+        physics: const BouncingScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 250,
             childAspectRatio: 8 / 7,
