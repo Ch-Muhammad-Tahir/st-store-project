@@ -5,6 +5,7 @@ import 'package:st_store/views/onboarding_screen/onboarding_screen_widget.dart';
 
 void main(List<String> args) {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     theme: ThemeData(textTheme: GoogleFonts.dmSansTextTheme()),
     home: OnBoardingScreenWidget(),
   ));
